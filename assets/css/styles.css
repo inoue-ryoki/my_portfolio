@@ -1,0 +1,354 @@
+@charset "utf-8";
+body{
+font-family: 'Bilbo', cursive;
+font-family: 'Cormorant Infant', serif;
+
+}
+
+a{
+  text-decoration: none;
+}
+.navvar{
+    display: none;
+}
+
+@media(min-width:1025px){
+  .navvar{
+    display: inline-block;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color:rgba( 255, 0, 0, 0.5 );
+
+}
+.navvar-list{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  padding: 15px;
+
+}
+
+.nav-item{
+  padding-right: 15px;
+
+}
+.nav-item a{
+  color: black;
+}
+}
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn{
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+}
+
+@media(min-width:1025px){
+  .menu-btn{
+    display: none;
+}
+}
+
+
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: #555; */
+   background-color:rgba(255,255,255,0.8);
+}
+.menu__item{
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+.menu__item  a{
+  color: black;
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.menu{
+  transform: translateX(-100vw);
+  transition: all .3s linear;
+}
+/* アニメーション後のメニューの状態 */
+.menu.is-active{
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+/* トップ */
+.top{
+  position: relative;
+
+}
+
+/* topの名前 */
+.name{
+  position:absolute;
+  top: 54%;
+  left: 36%;
+  font-size: 20px;
+  color: #fff;
+
+
+}
+
+@media(min-width:768px){
+.name{
+  position:absolute;
+  top: 54%;
+  left: 36%;
+  font-size: 40px;
+  color: #fff;
+
+
+}
+}
+@media(min-width:1025px){
+.name{
+  position:absolute;
+  top: 54%;
+  left: 50%;
+  font-size: 40px;
+  color: #fff;
+  transform: translateX(-90px);
+
+
+}
+}
+
+
+/* 各欄を中央に配置 */
+.about,.skills,.works,.contact{
+  text-align: center;
+}
+
+/* aboutの文字 */
+.about-top{
+  padding: 30px;
+}
+
+/* プロフィール画像 */
+.profile-img{
+  width: 50%;
+  border-radius: 50%;
+}
+
+
+/* aboutのテキスト */
+.about-text{
+  padding: 12px 30px;
+  text-align: left;
+}
+
+.about-img-text{
+  padding-bottom: 30px;
+}
+
+.center{
+  text-align: center;
+}
+
+@media(min-width:768px){
+  .about-text{
+    padding: 12px 140px;
+  }
+}
+
+
+@media(min-width:1025px){
+  .about-img-text{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 50px;
+  }
+  .about-text-list{
+    text-align: left;
+  }
+ .profile-img{
+    width:300px;
+  }
+  .about-text{
+    text-align: left;
+  }
+}
+
+.skills{
+
+  background-image: url("../images/code-back.jpeg");
+  background-attachment: fixed;
+  /* background-size: cover; */
+
+
+}
+.skills-top{
+   color: #fff;
+  padding: 40px;
+}
+
+.skills-list{
+   color: #fff;
+  font-size: 1.75rem;
+  padding: 30px;
+}
+.skills-text{
+   color: #fff;
+   padding:30px;
+}
+
+@media(min-width:1025px){
+  .skills-content{
+    width: 30%;
+  }
+  .skills-contents{
+    display: flex;
+    justify-content: space-between;
+  }
+  .skills-top{
+
+  font-size: 35px;
+}
+.skills-text{
+  font-size: 20px;
+}
+}
+
+/* HTMLのマーク */
+.fa-code{
+  color: red;
+  font-size: 70px;
+}
+.fa-php{
+  color: blue;
+  font-size: 70px;
+
+}
+/* jsとWordPressのマーク */
+.fa-js,.fa-wordpress{
+  font-size: 70px;
+}
+
+.works-top{
+  padding: 40px;
+}
+.works-top-text{
+  padding: 2px;
+
+}
+
+.works-name{
+  padding: 40px;
+}
+
+.works-img{
+  width: 80%;
+}
+
+.works-text{
+  line-height: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.works-content a:hover{
+  opacity: 0.7;
+   transition-duration: 0.3s;
+}
+
+@media(min-width:1025px){
+  .works-top{
+    font-size: 35px;
+  }
+  .works-top-text{
+    font-size: 20px;
+  }
+  .works-contents{
+    display: flex;
+  }
+}
+
+
+.contact{
+    background-color: lightskyblue;
+    padding-bottom: 40px;
+}
+
+
+.contact-top{
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+}
+
+@media(min-width:1025px){
+  .contact-top{
+   font-size: 35px;
+
+}
+}
+ .form input{
+     height: 40px;
+ }
+
+ .form input,.form textarea,button{
+    display: block;
+    margin: 20px auto;
+ }
+
+.form input,textarea{
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 20px;
+}
+
+.form button {
+    width: 100px;
+    margin-top: 50px;
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    padding: 10px;
+    border-radius: 5%;
+    border: 1px solid transparent;
+}
